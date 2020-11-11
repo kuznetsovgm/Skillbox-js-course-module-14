@@ -1,0 +1,15 @@
+@import '~normalize.css';
+.btn-counter {
+	background-color: #fc6d26;
+	padding: 0.5rem 2.5rem;
+	color: #fff;
+	border: 0.1rem solid #e24329;
+	border-radius: .5rem;
+	font-family: sans-serif;
+	font-size: 1rem;
+	outline: none;
+}
+.btn-counter:active {
+	background-color: #e24329;
+	border-color: #fc6d26;
+}
