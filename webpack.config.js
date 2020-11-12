@@ -1,5 +1,4 @@
 const path = require('path');
-// const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -12,6 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // Folder to store generated bundle
     filename: 'index.js',  // Name of generated bundle after build
     library: 'BtnCounter',
+    libraryTarget: 'umd',
   },
   resolve: {
     alias: {
@@ -29,9 +29,6 @@ module.exports = {
     },
   },
   plugins: [
-    // new HTMLWebpackPlugin({
-    //   template: 'index.html',
-    // }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css'
